@@ -14,7 +14,7 @@ public enum WheelPickerStyle: Int {
     case styleFlat
 }
 
-@objc public protocol WheelPickerDataSource: class {
+@objc public protocol WheelPickerDataSource: AnyObject {
     
     func numberOfItems(_ wheelPicker: WheelPicker) -> Int
     
@@ -22,7 +22,7 @@ public enum WheelPickerStyle: Int {
     @objc optional func imageFor(_ wheelPicker: WheelPicker, at index: Int) -> UIImage
 }
 
-@objc public protocol WheelPickerDelegate: class {
+@objc public protocol WheelPickerDelegate: AnyObject {
     
      @objc optional func wheelPicker(_ wheelPicker: WheelPicker, didSelectItemAt index: Int)
      @objc optional func wheelPicker(_ wheelPicker: WheelPicker, marginForItem index: Int) -> CGSize

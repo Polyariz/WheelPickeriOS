@@ -45,7 +45,7 @@ open class WheelPickerCell : UICollectionViewCell {
                 
                 let transition = CATransition()
                 transition.duration = 0.15
-                transition.type = CATransitionType(rawValue: kCATransition)
+                transition.type = .fade
                 label.layer.add(transition, forKey: nil)
                 label.font = isSelected ? highlightedFont : font
             }

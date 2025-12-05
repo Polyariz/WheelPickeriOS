@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol WheelPickerLayoutDelegate: class {
+public protocol WheelPickerLayoutDelegate: AnyObject {
     
     func pickerViewStyle(for layout: WheelPickerCollectionViewLayout) -> WheelPickerStyle
 }
